@@ -385,3 +385,442 @@
                 justify-content: center;
             }
         }
+
+        /* ============================================
+    ESTILOS PARA FUNCIONALIDADES EXTRA
+   ============================================ */
+
+/* Modo Oscuro */
+body.dark-mode {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #e0e1dd;
+}
+
+body.dark-mode .container {
+    background: #1e293b;
+    color: #e0e1dd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #1e40af, #1e293b);
+}
+
+body.dark-mode .stats-bar {
+    background: #334155;
+    border-bottom: 2px solid #475569;
+}
+
+body.dark-mode .stat {
+    background: #475569;
+    color: #e2e8f0;
+}
+
+body.dark-mode .controls {
+    background: #334155;
+}
+
+body.dark-mode .question-text {
+    background: #475569;
+    color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+}
+
+body.dark-mode .option {
+    background: #475569;
+    border-color: #64748b;
+    color: #f1f5f9;
+}
+
+body.dark-mode .option:hover {
+    background: #4b5563;
+    border-color: #3b82f6;
+}
+
+body.dark-mode .option.selected {
+    background: #374151;
+    border-color: #60a5fa;
+}
+
+body.dark-mode .feedback-correct {
+    background: #064e3b;
+    border-color: #047857;
+    color: #a7f3d0;
+}
+
+body.dark-mode .feedback-incorrect {
+    background: #7f1d1d;
+    border-color: #b91c1c;
+    color: #fecaca;
+}
+
+body.dark-mode .explanation {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botones extra */
+.btn-info {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #6c757d;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.btn-info:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.extra-controls {
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+}
+
+body.dark-mode .extra-controls {
+    background: #334155;
+    border-top: 2px solid #475569;
+}
+
+/* Animación para notificaciones */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Estilos responsivos para botones extra */
+@media (max-width: 768px) {
+    .extra-controls {
+        flex-direction: column;
+    }
+    
+    .btn-info {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Mejoras para la barra de progreso */
+.progress-container {
+    position: relative;
+}
+
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 0.9rem;
+}
+
+/* Estilos para preguntas mezcladas */
+.question-shuffled {
+    animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+/* ============================================
+   ESTILOS PARA FUNCIONALIDADES EXTRA
+   ============================================ */
+
+/* Modo Oscuro */
+body.dark-mode {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    color: #e0e1dd;
+}
+
+body.dark-mode .container {
+    background: #1e293b;
+    color: #e0e1dd;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode header {
+    background: linear-gradient(90deg, #1e40af, #1e293b);
+}
+
+body.dark-mode .stats-bar {
+    background: #334155;
+    border-bottom: 2px solid #475569;
+}
+
+body.dark-mode .stat {
+    background: #475569;
+    color: #e2e8f0;
+}
+
+body.dark-mode .controls {
+    background: #334155;
+}
+
+body.dark-mode .question-text {
+    background: #475569;
+    color: #f8fafc;
+    border-left: 5px solid #3b82f6;
+}
+
+body.dark-mode .option {
+    background: #475569;
+    border-color: #64748b;
+    color: #f1f5f9;
+}
+
+body.dark-mode .option:hover {
+    background: #4b5563;
+    border-color: #3b82f6;
+}
+
+body.dark-mode .option.selected {
+    background: #374151;
+    border-color: #60a5fa;
+}
+
+body.dark-mode .feedback-correct {
+    background: #064e3b;
+    border-color: #047857;
+    color: #a7f3d0;
+}
+
+body.dark-mode .feedback-incorrect {
+    background: #7f1d1d;
+    border-color: #b91c1c;
+    color: #fecaca;
+}
+
+body.dark-mode .explanation {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Botones extra */
+.btn-info {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #6c757d;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.btn-info:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.extra-controls {
+    padding: 15px;
+    background: #f8f9fa;
+    border-top: 2px solid #dee2e6;
+    border-bottom: 2px solid #dee2e6;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+body.dark-mode .extra-controls {
+    background: #334155;
+    border-top: 2px solid #475569;
+    border-bottom: 2px solid #475569;
+}
+
+/* Select de bloques */
+.block-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #3498db;
+    font-size: 1rem;
+    background: white;
+    color: #333;
+    cursor: pointer;
+}
+
+body.dark-mode .block-select {
+    background: #475569;
+    color: #f1f5f9;
+    border-color: #3b82f6;
+}
+
+/* Animación para notificaciones */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Botones de navegación adicionales */
+.navigation-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Acciones de resultados */
+.results-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* Mejoras para la barra de progreso */
+.progress-container {
+    position: relative;
+    padding: 20px;
+    background: #f1f2f6;
+}
+
+body.dark-mode .progress-container {
+    background: #334155;
+}
+
+.progress-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+/* Notificaciones */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    background: #3498db;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 300px;
+    max-width: 400px;
+    animation: slideIn 0.3s ease;
+}
+
+.notification button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    padding: 0;
+}
+
+.notification-success {
+    background: #2ecc71;
+}
+
+.notification-warning {
+    background: #f39c12;
+}
+
+.notification-error {
+    background: #e74c3c;
+}
+
+/* Estilos para preguntas marcadas */
+.option.marked {
+    border-color: #f39c12;
+    background: #fff3cd;
+}
+
+body.dark-mode .option.marked {
+    background: #5a4a0a;
+    border-color: #d4a017;
+}
+
+/* Preguntas revisadas */
+.question-reviewed {
+    background: #fff3cd !important;
+    border-left: 5px solid #f39c12 !important;
+}
+
+body.dark-mode .question-reviewed {
+    background: #5a4a0a !important;
+    border-left: 5px solid #d4a017 !important;
+}
+
+/* Estilos responsivos para botones extra */
+@media (max-width: 768px) {
+    .extra-controls {
+        flex-direction: column;
+    }
+    
+    .btn-info {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .navigation-buttons {
+        justify-content: center;
+    }
+    
+    .results-actions {
+        flex-direction: column;
+    }
+}

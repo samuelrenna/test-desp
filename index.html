@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <!-- Agregar esto en el <head> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Icono para la pestaña -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
     <title>🚀 Examen Despliegue Web - Práctica</title>
 </head>
 <body>
@@ -22,18 +26,18 @@
 
         <div class="controls">
             <button class="btn-primary" onclick="startExam()">
-                ▶️ Iniciar Examen
+                <i class="fas fa-play"></i> Iniciar Examen
             </button>
             <button class="btn-warning" onclick="resetExam()">
-                🔄 Reiniciar
+                <i class="fas fa-redo"></i> Reiniciar
             </button>
             <button class="btn-success" onclick="showResults()">
-                📊 Ver Resultados
+                <i class="fas fa-chart-bar"></i> Ver Resultados
             </button>
             <button class="btn-danger" onclick="showAnswers()">
-                🔍 Ver Soluciones
+                <i class="fas fa-search"></i> Ver Soluciones
             </button>
-            <select id="block-select" onchange="filterByBlock()" style="padding: 10px; border-radius: 8px; border: 2px solid #3498db;">
+            <select id="block-select" onchange="filterByBlock()" class="block-select">
                 <option value="all">Todos los bloques</option>
                 <option value="1">1️⃣ Redes y Protocolos</option>
                 <option value="2">🐧 Linux y Permisos</option>
@@ -43,9 +47,12 @@
             </select>
         </div>
 
+        <!-- CONTROLES EXTRA SE AGREGARÁN AUTOMÁTICAMENTE CON JS -->
+
         <div class="progress-container">
             <div class="progress-bar">
                 <div class="progress-fill" id="progress-fill"></div>
+                <div class="progress-label" id="progress-label">0%</div>
             </div>
         </div>
 
@@ -68,8 +75,20 @@
             </div>
 
             <div class="navigation">
-                <button class="btn-primary" onclick="previousQuestion()">⬅️ Anterior</button>
-                <button class="btn-success" onclick="nextQuestion()">Siguiente ➡️</button>
+                <button class="btn-primary" onclick="previousQuestion()">
+                    <i class="fas fa-arrow-left"></i> Anterior
+                </button>
+                <div class="navigation-buttons">
+                    <button class="btn-info" onclick="showHint()" title="Mostrar pista">
+                        <i class="fas fa-lightbulb"></i> Pista
+                    </button>
+                    <button class="btn-info" onclick="markForReview()" title="Marcar para revisión">
+                        <i class="fas fa-flag"></i> Marcar
+                    </button>
+                </div>
+                <button class="btn-success" onclick="nextQuestion()">
+                    Siguiente <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -112,12 +131,20 @@
                     <span id="accuracy">0%</span>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 30px;">
-                <button class="btn-danger" onclick="closeResults()">Cerrar</button>
+            <div class="results-actions">
+                <button class="btn-danger" onclick="closeResults()">
+                    <i class="fas fa-times"></i> Cerrar
+                </button>
+                <button class="btn-info" onclick="exportResults()">
+                    <i class="fas fa-download"></i> Exportar PDF
+                </button>
+                <button class="btn-success" onclick="shareResults()">
+                    <i class="fas fa-share"></i> Compartir
+                </button>
             </div>
         </div>
     </div>
 
-<script src="./app.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
